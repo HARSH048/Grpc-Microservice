@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service Posts {
+    rpc Find (postId) returns (post) {}
+}
+
+message post {
+    string id = 1;
+    string title = 2;
+    string content = 3;
+    string userId = 4;
+}
+
+message postId {
+    string id = 1;
+}
